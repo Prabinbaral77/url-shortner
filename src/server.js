@@ -7,7 +7,7 @@ const app = express()
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended: false}))
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT
 
 app.get('/', async (req, res) => {
     const shortUrls = await ShortUrl.find()
